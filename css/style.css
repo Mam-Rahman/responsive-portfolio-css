@@ -1,7 +1,9 @@
+/* <!-- Global stlying --> */
 * {
   box-sizing: border-box;
 }
 
+/* <!-- Varible code --> */
 :root {
   --text-bg-color: #5937c9;
   --grey-color: #d1d1d1;
@@ -56,12 +58,12 @@ nav li a::after {
   bottom: -10px;
   width: 100%;
   height: 3px;
-  background-color: currentColor;
+  background-color: var(--grey-color);
   
 }
 
 nav li a:hover::after {
-  color: var(--text-bg-color);
+  background-color: var(--text-bg-color);
 }
 
 /* <!-- Hero Banner Section --> */
@@ -201,5 +203,38 @@ p {
   margin: 0;
   font-size: .5rem;
 
+}
+
+/* <!-- Contact Section --> */
+.contact {
+  align-items: center;
+}
+
+.contact ul li {
+  list-style: none;
+  display:inline-block;
+}
+
+.contact li a {
+  font-size: 20px;
+  text-decoration: none;
+  color:var(---dark-grey);
+  position: relative;
+  margin-right: 40px;
+}
+
+.contact li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -10px;
+  height: 3px;
+  background-color: var(--grey-color);
+  
+
+}
+.contact li a:hover::after {
+  background-color: var(--text-bg-color);
 }
 

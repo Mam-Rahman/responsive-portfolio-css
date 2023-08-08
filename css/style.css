@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-bg-color: #2c8589;
+  --grey-color: #d1d1d1;
+  --dark-grey:#2e2e2e;
+  --white:#fff;
+  --border-radius:5px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -21,3 +29,106 @@ h6 {
 p {
   margin: 0;
 }
+
+/* <!-- Work Section --> */
+.page-wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.page-section {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin:  80px 0;
+  gap:20px;
+}
+
+.page-section h2 {
+  font-size: 40px;
+  text-align: right;
+  border-right: 3px solid var(--text-bg-color);
+  padding-right: 40px;
+  margin: 5px;
+  color: var(--text-bg-color);
+}
+
+.portfolio {
+  display: grid;
+  height: 750px;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: 
+  "portfolio-1 portfolio-1" 
+  "portfolio-2 portfolio-3" 
+  "portfolio-4 run-buddy" 
+}
+
+.portfolio > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  margin: 10px;
+  opacity: 0.7;
+  box-shadow: 3px 3px 10px var(--dark-grey) ;
+  border-radius:var(--border-radius);
+}
+
+.portfolio > div:hover {
+  opacity: 1;
+}
+
+
+.portfolio-1 {
+  grid-area: portfolio-1;
+  background-image: url(../images/02-portfolio-4.jpg);
+  position: relative;
+
+
+}
+.portfolio-2 {
+  grid-area: portfolio-2;
+  background-image: url(../images/02-portfolio-1.jpg);
+  position: relative;
+
+}
+.portfolio-3 {
+  grid-area: portfolio-3;
+  background-image: url(../images/02-portfolio-2.jpg);
+  position: relative;
+
+}
+.portfolio-4 {
+  grid-area: portfolio-4;
+  background-image: url(../images/02-portfolio-3.jpg);
+  position: relative;
+
+}
+.run-buddy {
+  grid-area: run-buddy;
+  background-image: url(../images/02-run-buddy.jpg); 
+  position: relative;
+
+}
+
+.box-titles {
+  background-color: var(--dark-grey);
+  padding: 10px;
+  position: absolute;
+  color: var(--white);
+  bottom: 20px;
+  border-radius: var(--border-radius);
+}
+
+.box-titles h4 {
+  margin: 0;
+  font-size: 1.5rem;
+
+}
+.box-titles h6 {
+  margin: 0;
+  font-size: .5rem;
+
+}
+

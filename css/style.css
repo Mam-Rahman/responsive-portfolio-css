@@ -29,6 +29,7 @@ header {
 }
 
 header h1 {
+  font-size: 35px;
   color:var(--white);
   background-color: var(--text-bg-color);
   padding: 5px 15px 0px 15px;
@@ -58,8 +59,7 @@ nav li a::after {
   bottom: -10px;
   width: 100%;
   height: 3px;
-  background-color: var(--grey-color);
-  
+  background-color: var(--grey-color); 
 }
 
 nav li a:hover::after {
@@ -152,37 +152,34 @@ p {
   opacity: 1;
 }
 
-
 .portfolio-1 {
   grid-area: portfolio-1;
   background-image: url(../images/02-portfolio-4.jpg);
   position: relative;
-
-
 }
+
 .portfolio-2 {
   grid-area: portfolio-2;
   background-image: url(../images/02-portfolio-1.jpg);
   position: relative;
-
 }
+
 .portfolio-3 {
   grid-area: portfolio-3;
   background-image: url(../images/02-portfolio-2.jpg);
   position: relative;
-
 }
+
 .portfolio-4 {
   grid-area: portfolio-4;
   background-image: url(../images/02-portfolio-3.jpg);
   position: relative;
-
 }
+
 .run-buddy {
   grid-area: run-buddy;
   background-image: url(../images/02-run-buddy.jpg); 
   position: relative;
-
 }
 
 .box-titles {
@@ -197,12 +194,11 @@ p {
 .box-titles h4 {
   margin: 0;
   font-size: 1.5rem;
-
 }
+
 .box-titles h6 {
   margin: 0;
   font-size: .5rem;
-
 }
 
 /* <!-- Contact Section --> */
@@ -238,3 +234,132 @@ p {
   background-color: var(--text-bg-color);
 }
 
+/* <!-- Media Query tablet --> */
+@media only screen and (max-width: 1000px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+    margin: 0;
+  }
+  
+  header h1 {
+    font-size: 25px;
+    padding: 5px 20px;
+    margin: 0  auto;
+    border-radius: var(--border-radius);
+  }
+  
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  padding: 0;
+}
+nav ul li a {
+  margin: 10px 40px;
+}
+
+.hero-banner h2 {
+  font-size: 25px;
+}
+
+.page-section h2 {
+  font-size: 25px;
+  padding-right: 20px;
+}
+
+/* <!-- Work tablet --> */
+.portfolio {
+  height: 1000px;
+  grid-template-columns: 100%;
+  grid-template-rows: 34% 16.5% 16.5% 16.5% 16.5%;
+  grid-template-areas: 
+" portfolio-1 " 
+" portfolio-2 " 
+" portfolio-3 " 
+" portfolio-4 "  
+" run-buddy " ;
+}
+
+/* <!-- Contacts tablet --> */
+.contact ul a {
+  line-height: 3;
+  margin: 0;
+  padding: 0px;
+}
+
+}
+
+/* <!-- Media Query mobile --> */
+@media only screen and (max-width: 700px) {
+
+  header {
+    padding: 0;
+  }
+  
+  header h1 {
+    margin: 0 0 0 -20px;
+    padding-left:60px ;
+    border-radius: none;
+  }
+  nav {
+    display: block;
+  }
+  nav ul li {
+  display: block;
+  margin: 20px 0;
+}
+
+/* <!-- Hero Section mobile --> */
+.hero-banner h2 {
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  bottom: 50px;
+  right: 50px;
+}
+
+/* <!-- Work mobile --> */
+.page-wrapper {
+  width: 90%;
+}
+
+.page-section {
+  grid-template-columns: 100%;
+  gap: 10px;
+  margin:  0 auto;
+  align-items: center;
+}
+
+.page-section h2 {
+  border-right: none;
+  border-bottom: solid 2px var(--dark-grey);
+  text-align: center;
+  padding: 20px 5px 0 5px;
+}
+
+.portfolio {
+  height: 1000px;
+  grid-template-rows: 20% 20% 20% 20% 20% ;
+}
+
+.contact ul {
+  margin-left: 0;
+}
+
+.contact ul li {
+   display: block;
+}
+
+.contact ul a {
+  margin: 5px;
+
+}
+
+}

@@ -68,6 +68,14 @@ nav li a:hover::after {
 
 /* <!-- Hero Banner Section --> */
 
+.avatar {
+  height: 250px;
+  position: absolute;
+  margin: 20px 20px;
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+}
+
 .hero-banner {
   background-image: url(../images/02-hero-bg.jpg);
   height: 30vh;

@@ -16,7 +16,7 @@ Upload the following files to the deployed webserver:
 
 1. index.html
 2. license.txt
-3. assets folder (which includes images and CSS files)
+3. both css and images folders which hold asset files
 
 ## Usage
 

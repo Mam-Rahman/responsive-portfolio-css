@@ -3,7 +3,7 @@
 }
 
 :root {
-  --text-bg-color: #2c8589;
+  --text-bg-color: #5937c9;
   --grey-color: #d1d1d1;
   --dark-grey:#2e2e2e;
   --white:#fff;
@@ -16,6 +16,54 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
 }
+
+/* <!-- header / nav --> */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  background: var(--dark-grey);
+}
+
+header h1 {
+  color:var(--white);
+  background-color: var(--text-bg-color);
+  padding: 5px 15px 0px 15px;
+  margin: 0 0 0 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style: none;
+  display:inline-block;
+}
+
+nav li a {
+  font-size: 20px;
+  text-decoration: none;
+  color:var(--white);
+  margin: 0 10px;
+  position: relative;
+  align-items: center;
+}
+
+nav li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  
+}
+
+nav li a:hover::after {
+  color: var(--text-bg-color);
+}
+
 
 h1,
 h2,
@@ -44,7 +92,7 @@ p {
 }
 
 .page-section h2 {
-  font-size: 40px;
+  font-size: 35px;
   text-align: right;
   border-right: 3px solid var(--text-bg-color);
   padding-right: 40px;

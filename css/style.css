@@ -1,12 +1,12 @@
-/* <!-- Global stlying --> */
+/* Global stlying */
 * {
   box-sizing: border-box;
 }
 
-/* <!-- Varible code --> */
+/* Varible code */
 :root {
-  --text-bg-color: #5937c9;
-  --grey-color: #d1d1d1;
+  --theme-color: #5937c9;
+  --light-grey: #d1d1d1;
   --dark-grey:#2e2e2e;
   --white:#fff;
   --border-radius:5px;
@@ -19,7 +19,7 @@ body {
   line-height: 1.5;
 }
 
-/* <!-- header / nav --> */
+/* header & nav */
 
 header {
   display: flex;
@@ -31,7 +31,7 @@ header {
 header h1 {
   font-size: 35px;
   color:var(--white);
-  background-color: var(--text-bg-color);
+  background-color: var(--theme-color);
   padding: 5px 15px 0px 15px;
   margin: 0 0 0 10px;
   border-radius: var(--border-radius);
@@ -59,14 +59,14 @@ nav li a::after {
   bottom: -10px;
   width: 100%;
   height: 3px;
-  background-color: var(--grey-color); 
+  background-color: var(--light-grey); 
 }
 
 nav li a:hover::after {
-  background-color: var(--text-bg-color);
+  background-color: var(--theme-color);
 }
 
-/* <!-- Hero Banner Section --> */
+/* Hero Banner Section */
 
 .avatar {
   height: 250px;
@@ -89,7 +89,7 @@ nav li a:hover::after {
 .hero-banner h2 { 
   font-size: 2rem;
   color: var(--white);
-  background-color: var(--text-bg-color);
+  background-color: var(--theme-color);
   position: absolute;
   right: 100px;
   bottom: 10px;
@@ -111,7 +111,7 @@ p {
   margin: 0;
 }
 
-/* <!-- Work Section --> */
+/* Work Section */
 .page-wrapper {
   width: 80%;
   margin: 0 auto;
@@ -127,10 +127,10 @@ p {
 .page-section h2 {
   font-size: 35px;
   text-align: right;
-  border-right: 3px solid var(--text-bg-color);
+  border-right: 3px solid var(--theme-color);
   padding-right: 40px;
   margin: 5px;
-  color: var(--text-bg-color);
+  color: var(--theme-color);
 }
 
 .portfolio {
@@ -209,7 +209,7 @@ p {
   font-size: .5rem;
 }
 
-/* <!-- Contact Section --> */
+/* Contact Section */
 .contact {
   align-items: center;
 }
@@ -217,6 +217,7 @@ p {
 .contact ul li {
   list-style: none;
   display:inline-block;
+  margin: none;
 }
 
 .contact li a {
@@ -234,15 +235,15 @@ p {
   width: 100%;
   bottom: -10px;
   height: 3px;
-  background-color: var(--grey-color);
+  background-color: var(--light-grey);
   
 
 }
 .contact li a:hover::after {
-  background-color: var(--text-bg-color);
+  background-color: var(--theme-color);
 }
 
-/* <!-- Media Query tablet --> */
+/* Media Query tablet */
 @media only screen and (max-width: 1000px) {
 
   header {
@@ -281,7 +282,7 @@ nav ul li a {
   padding-right: 20px;
 }
 
-/* <!-- Work tablet --> */
+/* Work tablet */
 .portfolio {
   height: 1000px;
   grid-template-columns: 100%;
@@ -294,16 +295,17 @@ nav ul li a {
 " run-buddy " ;
 }
 
-/* <!-- Contacts tablet --> */
+/* Contacts tablet */
 .contact ul a {
   line-height: 3;
   margin: 0;
   padding: 0px;
+  margin-right:0.5em;
 }
 
 }
 
-/* <!-- Media Query mobile --> */
+/* Media Query mobile */
 @media only screen and (max-width: 700px) {
 
   header {
@@ -323,7 +325,7 @@ nav ul li a {
   margin: 20px 0;
 }
 
-/* <!-- Hero Section mobile --> */
+/* Hero Section mobile */
 .hero-banner h2 {
   font-size: 25px;
   justify-content: center;
@@ -333,7 +335,7 @@ nav ul li a {
   right: 50px;
 }
 
-/* <!-- Work mobile --> */
+/* Work mobile */
 .page-wrapper {
   width: 90%;
 }
@@ -367,7 +369,6 @@ nav ul li a {
 
 .contact ul a {
   margin: 5px;
-
 }
 
 }
